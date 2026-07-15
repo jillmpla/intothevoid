@@ -1,3 +1,8 @@
+# Root-level Node files
+node_modules/
+package-lock.json
+package.json
+
 # Frontend
 frontend/node_modules/
 frontend/dist/
