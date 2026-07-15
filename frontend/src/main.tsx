@@ -4,6 +4,7 @@ import { StrictMode } from "react";
 // createRoot connects the React app to the root element in index.html.
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router";
+import { Analytics } from "@vercel/analytics/react";
 
 // Import the main application, information pages, and global styles.
 import App from "./App";
@@ -20,6 +21,8 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/about" element={<About />} />
         <Route path="/privacy" element={<Privacy />} />
       </Routes>
+
+      <Analytics />
     </BrowserRouter>
   </StrictMode>,
 );
