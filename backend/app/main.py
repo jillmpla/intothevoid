@@ -9,17 +9,20 @@ from .models import AnalysisResponse
 # Limit uploads to 10 MB so the first version stays lightweight.
 MAX_FILE_SIZE = 10 * 1024 * 1024
 
-# Read the deployed frontend address environment variable.
+# Read the deployed frontend address from the environment variable.
 frontend_url = os.getenv("FRONTEND_URL")
 
+# Allow the local frontend and both versions of the production domain.
 allowed_origins = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+    "https://intothevoid.website",
+    "https://www.intothevoid.website",
 ]
 
-# Add the production frontend URL when configured.
-if frontend_url:
-    allowed_origins.append(frontend_url)
+# Add the environment variable value if it exists and is not already listed.
+if frontend_url and frontend_url not in allowed_origins:
+    allowed_origins.append(frontend_url.rstrip("/"))
 
 app = FastAPI(
     title="Into the Void API",
@@ -27,6 +30,7 @@ app = FastAPI(
     version="0.1.0",
 )
 
+# Allow approved frontend addresses to communicate with the API.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=allowed_origins,
