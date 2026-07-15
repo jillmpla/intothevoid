@@ -150,3 +150,13 @@ The interface includes:
 - Maximum upload size: 10 MB
 - Missingness analysis only
 - The heatmap displays a sample of up to 40 rows and 12 columns
+
+## 📄 License
+
+See [`LICENSE.txt`](./LICENSE.txt) for the full license terms.
+
+---
+
+## ⭐ Support the Project
+
+If you find Into the Void useful, consider giving the repository a star.
