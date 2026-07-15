@@ -192,4 +192,4 @@ See [`LICENSE.txt`](./LICENSE.txt) for the full license terms.
 
 ## ⭐ Support the Project
 
-If you find Into the Void useful, consider giving the repository a star.
+If you find **Into the Void** useful, consider giving the repository a star.
