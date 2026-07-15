@@ -39,61 +39,48 @@ into-the-void/
 │   │   ├── main.tsx
 │   │   ├── styles.css
 │   │   └── types.ts
-│   ├── .env.example
-│   ├── eslint.config.js
-│   ├── index.html
 │   ├── package.json
-│   ├── tsconfig.app.json
-│   ├── tsconfig.json
-│   ├── tsconfig.node.json
-│   └── vite.config.ts
+│   └── vercel.json
 ├── backend/
 │   ├── app/
-│   │   ├── __init__.py
 │   │   ├── analyzer.py
 │   │   ├── main.py
 │   │   └── models.py
 │   ├── tests/
 │   │   └── test_analyzer.py
+│   ├── index.py
 │   └── requirements.txt
 ├── sample-data/
 │   └── stellar_customers.csv
-├── .gitignore
 ├── LICENSE
 └── README.md
 ```
 
 ### Frontend
 
-- **`frontend/src/App.tsx`** — Contains the main React interface, including CSV upload, dataset summary cards, the Event Horizon ranking, Column Autopsy details, and the missingness map.
-- **`frontend/src/About.tsx`** — Provides the About page with information about the project and its creator.
-- **`frontend/src/Privacy.tsx`** — Explains how uploaded CSV files are processed and outlines the app’s privacy practices.
-- **`frontend/src/Footer.tsx`** — Creates the shared footer with navigation links, branding, and an automatically updating copyright year.
-- **`frontend/src/api.ts`** — Sends uploaded CSV files to the FastAPI backend and returns the analysis results.
-- **`frontend/src/main.tsx`** — Starts the React application and defines the routes for the scanner, About page, and Privacy page.
-- **`frontend/src/styles.css`** — Defines the responsive space-themed design, accessibility styles, layouts, focus states, footer, and information pages.
-- **`frontend/src/types.ts`** — Defines the TypeScript types used for API responses, column profiles, status labels, and heatmap cells.
-- **`frontend/.env.example`** — Shows how to configure the frontend API URL.
-- **`frontend/index.html`** — Provides the base HTML page and root element used by React.
-- **`frontend/package.json`** — Lists the frontend dependencies, project information, and available development scripts.
-- **`frontend/vite.config.ts`** — Configures Vite and the React plugin.
-- **`frontend/eslint.config.js`** — Defines the frontend linting and code-quality rules.
-- **`frontend/tsconfig.json`** — Connects the frontend TypeScript configuration files.
-- **`frontend/tsconfig.app.json`** — Defines TypeScript settings for the React application.
-- **`frontend/tsconfig.node.json`** — Defines TypeScript settings for the Vite configuration.
+- **`frontend/src/App.tsx`** — Contains the CSV upload experience and missing-data dashboard.
+- **`frontend/src/About.tsx`** — Provides information about the project and its creator.
+- **`frontend/src/Privacy.tsx`** — Explains how uploaded files are handled.
+- **`frontend/src/Footer.tsx`** — Creates the shared footer and navigation.
+- **`frontend/src/api.ts`** — Sends CSV files to the backend for analysis.
+- **`frontend/src/main.tsx`** — Starts the app and defines its routes.
+- **`frontend/src/styles.css`** — Contains the responsive, accessible, space-themed design.
+- **`frontend/src/types.ts`** — Defines the TypeScript types used by the frontend.
+- **`frontend/package.json`** — Lists frontend dependencies and scripts.
+- **`frontend/vercel.json`** — Configures Vercel routing for the React app.
 
 ### Backend
 
-- **`backend/app/main.py`** — Creates the FastAPI application, configures CORS, validates uploaded files, and provides the API endpoints.
-- **`backend/app/analyzer.py`** — Reads CSV files with pandas and calculates missing-value totals, percentages, column profiles, streaks, statuses, and heatmap data.
-- **`backend/app/models.py`** — Defines the Pydantic models used to structure API responses.
-- **`backend/app/__init__.py`** — Marks the `app` directory as a Python package.
-- **`backend/tests/test_analyzer.py`** — Tests the status thresholds, missing-value streak calculations, and CSV analysis results.
-- **`backend/requirements.txt`** — Lists the Python packages required to run and test the backend.
+- **`backend/app/main.py`** — Creates the FastAPI application and upload endpoint.
+- **`backend/app/analyzer.py`** — Analyzes missing values and builds the report data.
+- **`backend/app/models.py`** — Defines the API response models.
+- **`backend/tests/test_analyzer.py`** — Tests the core analysis logic.
+- **`backend/index.py`** — Exposes the FastAPI app for Vercel.
+- **`backend/requirements.txt`** — Lists the backend Python dependencies.
 
 ### Sample Data
 
-- **`sample-data/stellar_customers.csv`** — A fictional customer dataset with intentional missing values for testing the application.
+- **`sample-data/stellar_customers.csv`** — Provides a fictional CSV with intentional gaps for testing.
 
 ## Run locally
 
