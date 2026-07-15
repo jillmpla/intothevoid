@@ -492,7 +492,7 @@ function App() {
                     Sample view
                   </span>
 
-                  <h2 id="map-title">Missingness Map</h2>
+                  <h2 id="map-title">Where Data Is Missing</h2>
                 </div>
 
                 <div className="map-legend" aria-hidden="true">
@@ -517,7 +517,7 @@ function App() {
                     gridTemplateColumns: `minmax(72px, auto) repeat(${analysis.heatmap_columns.length}, minmax(36px, 1fr))`,
                   }}
                   role="table"
-                  aria-label="Missingness map"
+                  aria-label="Where Data Is Missing"
                 >
                   <div
                     className="heatmap-corner"

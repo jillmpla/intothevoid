@@ -13,7 +13,7 @@ Try it with the included `sample-data/stellar_customers.csv` file to see the mis
 - 📂 Drag-and-drop or keyboard-accessible CSV upload
 - 🕳️ Overall **Void Depth** score and plain-language status
 - 📊 Missing-value ranking for every column
-- 🗺️ Accessible missingness map with a text alternative
+- 🗺️ Accessible Where Data Is Missing map with a text alternative
 - 🔎 Column-level details
 - 🚫 No account or database required
 - 🔒 Files are analyzed in memory and are not saved by the app
@@ -181,7 +181,7 @@ The interface includes:
 
 - CSV files only
 - Maximum upload size: 10 MB
-- Missingness analysis only
+- Where Data Is Missing analysis only
 - The heatmap displays a sample of up to 40 rows and 12 columns
 
 ## 📄 License

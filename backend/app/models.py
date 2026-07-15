@@ -26,7 +26,7 @@ class ColumnProfile(BaseModel):
 
 
 class HeatmapCell(BaseModel):
-    """Represents one cell in the missingness map."""
+    """Represents one cell in the Where Data Is Missing map."""
 
     row: int
     column: str
@@ -50,7 +50,7 @@ class AnalysisResponse(BaseModel):
     # Detailed column information used by the Event Horizon and Column Autopsy.
     column_profiles: list[ColumnProfile]
 
-    # A smaller sample of the dataset used to build the missingness map.
+    # A smaller sample of the dataset used to build the Where Data Is Missing map.
     heatmap_columns: list[str]
     heatmap_rows: list[int]
     heatmap: list[HeatmapCell]
