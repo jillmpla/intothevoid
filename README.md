@@ -25,7 +25,7 @@ Try it with the included `sample-data/stellar_customers.csv` file to see the mis
 - FastAPI
 - pandas
 
-## Project Structure
+## Main Project Structure
 
 ```text
 into-the-void/
@@ -82,9 +82,13 @@ into-the-void/
 
 - **`sample-data/stellar_customers.csv`** - A fictional CSV with intentional gaps for testing.
 
-## Run locally
+## Run Locally
+
+Run the backend and frontend in two separate terminals.
 
 ### 1. Start the backend
+
+From the project root, move into the backend folder and create a virtual environment:
 
 ```bash
 cd backend
@@ -105,34 +109,63 @@ Activate the virtual environment:
 source .venv/bin/activate
 ```
 
-Install dependencies and start the API:
+Install the backend dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
+
+Start the FastAPI server:
+
+```bash
 uvicorn app.main:app --reload --port 8000
+```
+
+Keep this terminal open while using the app.
+
+The backend will run at:
+
+```text
+http://localhost:8000
+```
+
+You can test it by opening:
+
+```text
+http://localhost:8000/api/health
 ```
 
 ### 2. Start the frontend
 
-Open a second terminal:
+Open a second terminal, return to the project root, and move into the frontend folder:
 
 ```bash
 cd frontend
+```
+
+Install the frontend dependencies:
+
+```bash
 npm install
+```
+
+Start the Vite development server:
+
+```bash
 npm run dev
 ```
 
-Open the local URL shown by Vite, usually `http://localhost:5173`.
+Keep this terminal open while using the app.
 
-## Try the sample file
-
-Upload:
+Open the local URL shown by Vite, usually:
 
 ```text
-sample-data/stellar_customers.csv
+http://localhost:5173
 ```
 
-## Accessibility
+> `npm install` usually only needs to be run the first time or whenever `package.json` changes. After that, you can start the frontend with `npm run dev`.
+
+## 🫶 Accessibility
 
 The interface includes:
 
@@ -144,7 +177,7 @@ The interface includes:
 - Screen-reader summaries for visual data
 - A standard file input in addition to drag-and-drop
 
-## Current MVP limits
+## 🚧 Current Limitations
 
 - CSV files only
 - Maximum upload size: 10 MB
