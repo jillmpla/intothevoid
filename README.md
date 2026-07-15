@@ -1,10 +1,10 @@
 # 🌌 Into the Void
 
-Into the Void is a small, accessible data-quality web app that analyzes missing values in CSV files. Upload a dataset to see its overall missingness, the columns most affected, and a compact visual map of where values disappear.
+Into the Void is a small, accessible data-quality web app that analyzes missing values in CSV files. Upload a dataset to discover missing data, identify incomplete columns, and visualize where gaps appear throughout your dataset.
 
 ## 🚀 Live Demo
 
-**Explore the void:** [intothevoid.website](http://www.intothevoid.website)
+**Explore the void:** [http://www.intothevoid.website](http://www.intothevoid.website)
 
 Try it with the included `sample-data/stellar_customers.csv` file to see the missing-data analysis in action.
 
