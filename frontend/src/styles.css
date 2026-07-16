@@ -933,17 +933,31 @@ p {
     display: none;
   }
 
+  /* Mobile footer */
   .footer-content {
     grid-template-columns: 1fr;
+    justify-items: center;
     gap: 1.25rem;
+    text-align: center;
+  }
+
+  .footer-brand {
+    justify-content: center;
   }
 
   .footer-links {
     order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.75rem;
   }
 
   .footer-copyright {
     order: 3;
+    width: 100%;
+    text-align: center;
   }
 
   .info-page {
