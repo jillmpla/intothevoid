@@ -4,7 +4,7 @@ Into the Void is a small, accessible data-quality web app that analyzes missing 
 
 ## 🚀 Live Demo
 
-**Explore the void:** [http://www.intothevoid.website](http://www.intothevoid.website)
+**Explore the void:** [https://www.intothevoid.website](https://www.intothevoid.website)
 
 Try it with the included `sample-data/stellar_customers.csv` file to see the missing-data analysis in action.
 
